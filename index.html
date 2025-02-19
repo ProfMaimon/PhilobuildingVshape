@@ -193,6 +193,38 @@
       body {
         background: linear-gradient(to bottom, #111, #222);
       }
+ /* Novas regras para telas menores: */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espaço entre os itens */
+  }
+  
+  /* Ajuste responsivo para imagens */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  img[loading="lazy"] {
+    width: 600px;
+    height: 400px;
+  }
+  
+  /* Tabelas com rolagem */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 10px; /* Para evitar que a tabela fique colada na borda */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
     }
   </style>
 </head>
